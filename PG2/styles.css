@@ -1,0 +1,46 @@
+h1{
+font-family: arial;
+white-space:nowrap;
+padding: 10px;
+font-size: 54px;
+background:silver;
+margin:0;
+}
+h2{
+color: white;
+}
+a{
+padding-left: 12px;
+text-decoration: none;
+}
+a:link, a:visited{
+color: blue
+}
+button{
+border:outset;
+outline:none;
+border-color: silver;
+}
+button:visited{
+border: outset;
+border-color: grey;
+}
+button:active{
+border:inset;
+}
+#logo{
+height:48px;
+}
+body{
+background:black;
+margin:0;
+padding:0;
+}
+table{
+width:100%;
+text-align:center;
+background:white
+}
+th{
+text-align:center;
+}
