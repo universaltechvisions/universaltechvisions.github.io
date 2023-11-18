@@ -44,3 +44,7 @@ background:white
 th{
 text-align:center;
 }
+#OS_AD{
+overflow: hidden;
+width:100%;
+}
