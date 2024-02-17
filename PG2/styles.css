@@ -8,6 +8,15 @@ margin:0;
 }
 h2{
 color: white;
+font-family: arial;
+font-size: 24px;
+margin-left:12px;
+}
+h3{
+color: white;
+font-family: arial;
+font-size: 24px;
+margin-left:20px;
 }
 a{
 padding-left: 12px;

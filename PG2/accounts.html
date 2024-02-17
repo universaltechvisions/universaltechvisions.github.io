@@ -43,7 +43,8 @@ function getCookie(name) {
     return decodeURI(dc.substring(begin + prefix.length, end));
 } 
 
-function doSomething() {
+onload = function doSomething() {
+
     var myCookie = getCookie("uniCount");
 
     if (myCookie == null) {
@@ -54,8 +55,24 @@ function doSomething() {
 
     }
 }
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "yourusername",
+  password: "yourpassword",
+  database: "mydb"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  con.query("SELECT * FROM customers", function (err, result, fields) {
+    if (err) throw err;
+    console.log(result);
+  });
+});
 </script>
-<iframe id = "account" onload="doSomething()" width="100%" height="100%"></iframe>
+<iframe id = "account"  width="50%" height="80%"></iframe>
 </body>
 <h2></h2>
 

@@ -1,0 +1,20 @@
+html{
+Background-color:white;
+text-align: right;
+margin-right: 100px;
+margin-top: 50px;
+font-family: Arial;
+}
+h1{
+	font-family: Arial;
+}
+p{
+	font-family: Arial;
+}
+.formbuilder-text{
+margin:10;
+}
+button{
+font-size:20;
+margin:10;
+}
