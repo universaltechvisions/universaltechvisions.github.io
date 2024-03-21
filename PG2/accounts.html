@@ -23,55 +23,34 @@
 <body>
 
 <script>
-function getCookie(name) {
-    var dc = document.cookie;
-    var prefix = name + "=";
-    var begin = dc.indexOf("; " + prefix);
-    if (begin == -1) {
-        begin = dc.indexOf(prefix);
-        if (begin != 0) return null;
+function getCookie(cname) {
+  let name = cname + "=";
+  let ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
     }
-    else
-    {
-        begin += 2;
-        var end = document.cookie.indexOf(";", begin);
-        if (end == -1) {
-        end = dc.length;
-        }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
     }
-
-    return decodeURI(dc.substring(begin + prefix.length, end));
-} 
+  }
+  return "";
+}
 
 onload = function doSomething() {
 
-    var myCookie = getCookie("uniCount");
+    var myCookie = getCookie("UTVLOGIN");
 
     if (myCookie == null) {
         document.getElementById("account").src = "signin.html";
     }
     else {
         document.getElementById("account").src = "options.html";
-
     }
 }
-var mysql = require('mysql');
-
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "yourusername",
-  password: "yourpassword",
-  database: "mydb"
-});
-
-con.connect(function(err) {
-  if (err) throw err;
-  con.query("SELECT * FROM customers", function (err, result, fields) {
-    if (err) throw err;
-    console.log(result);
-  });
-});
 </script>
+
 <iframe id = "account"  width="50%" height="80%"></iframe>
 </body>
 <h2></h2>
