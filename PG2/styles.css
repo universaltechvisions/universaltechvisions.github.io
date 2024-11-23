@@ -38,14 +38,6 @@ font-size:20px;
 
 }
 button:visited{
-border-style:solid;
-radius:20px;
-border-radius:20px;
-border: outset;
-border-color: grey;
-
-
-}
 radius:20px;
 border-radius:20px;
 border-style:solid;
@@ -53,6 +45,14 @@ outline:none;
 border-color: silver;
 font-size:20px;
 
+}
+button:active{
+radius:20px;
+border-radius:20px;
+border-style:solid;
+outline:none;
+border-color: grey;
+font-size:20px;
 }
 #logo{
 height:48px;
