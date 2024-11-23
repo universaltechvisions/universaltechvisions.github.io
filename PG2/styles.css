@@ -33,13 +33,17 @@ border:outset;
 outline:none;
 border-color: silver;
 font-size:20px;
+border-radius:20px;
 }
 button:visited{
 border: outset;
 border-color: grey;
+border-radius:20px;
+
 }
 button:active{
 border:inset;
+border-radius:20px;
 
 }
 #logo{
