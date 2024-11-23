@@ -29,27 +29,26 @@ a:link, a:visited{
 color: blue
 }
 button{
+border:solid;
 radius:20px;
 border-radius:20px;
-border:solid;
 outline:none;
 border-color: silver;
 font-size:20px;
 
 }
 button:visited{
+border:solid;
 radius:20px;
 border-radius:20px;
-border: solid;
 border-color: grey;
 
 
 }
 button:active{
+border:solid;
 radius:20px;
 border-radius:20px;
-border:solid;
-
 }
 #logo{
 height:48px;
