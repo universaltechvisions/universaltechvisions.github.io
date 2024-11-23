@@ -29,21 +29,26 @@ a:link, a:visited{
 color: blue
 }
 button{
+radius:20px;
+border-radius:20px;
 border:outset;
 outline:none;
 border-color: silver;
 font-size:20px;
-border-radius:20px;
+
 }
 button:visited{
+radius:20px;
+border-radius:20px;
 border: outset;
 border-color: grey;
-border-radius:20px;
+
 
 }
 button:active{
-border:inset;
+radius:20px;
 border-radius:20px;
+border:inset;
 
 }
 #logo{
