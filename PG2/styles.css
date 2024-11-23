@@ -46,11 +46,12 @@ border-color: grey;
 
 
 }
-button:active{
-border-style:solid;
 radius:20px;
 border-radius:20px;
-border:inset;
+border-style:solid;
+outline:none;
+border-color: silver;
+font-size:20px;
 
 }
 #logo{
