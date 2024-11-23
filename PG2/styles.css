@@ -31,7 +31,7 @@ color: blue
 button{
 radius:20px;
 border-radius:20px;
-border:outset;
+border:solid;
 outline:none;
 border-color: silver;
 font-size:20px;
@@ -40,7 +40,7 @@ font-size:20px;
 button:visited{
 radius:20px;
 border-radius:20px;
-border: outset;
+border: solid;
 border-color: grey;
 
 
@@ -48,7 +48,7 @@ border-color: grey;
 button:active{
 radius:20px;
 border-radius:20px;
-border:inset;
+border:solid;
 
 }
 #logo{
