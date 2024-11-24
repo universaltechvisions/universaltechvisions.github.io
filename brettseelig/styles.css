@@ -29,22 +29,30 @@ a:link, a:visited{
 color: blue
 }
 button{
-border:outset;
+radius:20px;
+border-radius:20px;
+border-style:solid;
 outline:none;
 border-color: silver;
-font-size: 20px;
-border-radius: 20px;
+font-size:20px;
+
 }
 button:visited{
-border: outset;
-border-color: grey;
-font-size: 20px;
-border-radius: 20px;
+radius:20px;
+border-radius:20px;
+border-style:solid;
+outline:none;
+border-color: silver;
+font-size:20px;
+
 }
 button:active{
-border: inset;
-font-size: 20px;
-border-radius: 20px;
+radius:20px;
+border-radius:20px;
+border-style:solid;
+outline:none;
+border-color: grey;
+font-size:20px;
 }
 #logo{
 height:48px;
