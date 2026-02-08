@@ -1,0 +1,62 @@
+<!--Start-->
+<head>
+<title>Home: Universtal Tech Visons</title>
+<link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="favicon" href="Favicon.ico">
+<div class="row">
+
+  <div class="column">
+
+  <h1>
+<img id="logo" src="UVLOGO.png">
+      <a>Universal Tech Visions</a>
+    </h1></nobr>
+</head>
+<table>
+	<th><a href="index.html"><button>Home</button></a></th>
+	<th><a href="products.html"><button>Products</button></a></th>
+	<th><a href="support.html"><button>Support</button></a></th>
+	<th><a href="about.html"><button>About</button></a></th>
+</table>
+<body>
+
+<script>
+function getCookie(name) {
+    var dc = document.cookie;
+    var prefix = name + "=";
+    var begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) return null;
+    }
+    else
+    {
+        begin += 2;
+        var end = document.cookie.indexOf(";", begin);
+        if (end == -1) {
+        end = dc.length;
+        }
+    }
+    // because unescape has been deprecated, replaced with decodeURI
+    //return unescape(dc.substring(begin + prefix.length, end));
+    return decodeURI(dc.substring(begin + prefix.length, end));
+} 
+
+onload = function doSomething() {
+
+    var myCookie = getCookie("UTVLOGIN");
+
+    if (myCookie == null) {
+        document.getElementById("account").src = "signin.html";
+    }
+    else {
+        document.getElementById("account").src = "Options.html";
+    }
+}
+</script>
+
+<iframe id = "account"  width="50%" height="80%"></iframe>
+</body>
+<h2></h2>
+
+<!--END-->

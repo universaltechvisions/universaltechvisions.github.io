@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="account.css">
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("button").click(function(){
+
+            $.ajax({
+                type: 'POST',
+                url: 'test.php',
+                success: function(data) {
+                    alert(data);
+                    $("p").text(data);
+
+                }
+            });
+   });
+});
+</script>
+		<script>
+function callPHPFunction() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "test.php?functionToCall=run", true);
+  xhttp.send();
+}
+function checkConfirmation() {
+  var passcode = document.getElementById("password").value;
+  var confirmPasscode = document.getElementById("confirmPassword").value;
+  var notEqualPassCode = document.getElementById("notEqualPassCode");
+  let btnSubmit = document.querySelector(".submit");
+  if (passcode == '' || confirmPasscode == '' || passcode != confirmPasscode) {
+    btnSubmit.disabled = true;
+    notEqualPassCode.innerHTML = '<i class="fa fa-fw fa-exclamation-triangle"></i>Passwords do not match!';
+  } else {
+    btnSubmit.disabled = false;
+    notEqualPassCode.innerHTML = '';
+  }
+}
+		</script>
+	</head>
+	<body>
+		<form id="rendered-form" method="post" action="http://localhost:8000/Create.php">
+			<div class="rendered-form formbuilder-embedded-bootstrap">
+				<div class="">
+					<form id="rendered-form">
+						<div class="rendered-form formbuilder-embedded-bootstrap">
+							<div class="">
+								<h1 id="control-2483320">Sign up</h1>
+							</div>
+						<div class="formbuilder-text form-group field-text-1707508345528-0">
+							<label for="text-1707508345528-0" class="formbuilder-text-label">Email
+								<span class="formbuilder-required">*
+								</span>
+							</label>
+						<input type="email" class="form-control" name="text-1707508345528-0" maxlength="255" id="text-1707508345528-0" required="required" aria-required="true" fdprocessedid="w1vpdg">
+						</div>
+						<div class="formbuilder-text form-group field-text-1707508448757-0">
+						<label for="text-1707508448757-0" class="formbuilder-text-label">Password<span class="formbuilder-required">*</span></label>
+			<div class="form-group mb-3">
+  <label class="label" for="password">Password</label>
+  <input id="password" type="password" class="form-control" placeholder="Password" name="passcode" required>
+  <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+</div>
+<div class="form-group mb-3">
+  <label class="label" for="confirmPassword">Confirm Password</label>
+  <input id="confirmPassword" type="password" class="form-control passcode" placeholder="Confirm Password" name="passCode" required onkeyup="checkConfirmation()">
+  <span toggle="#confirmPassword" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+</div>
+
+<span id="notEqualPassCode"></span></span><label for="text-1707508634946-0" class="formbuilder-text-label">Username<span class="formbuilder-required">*</span></label>
+<input type="text" class="form-control" name="text-1707508634946-0" maxlength="255" id="text-1707508634946-0" required="required" aria-required="true" fdprocessedid="xuy0s"></div>
+<div class="formbuilder-text form-group field-text-1707508515014-0"><label for="text-1707508515014-0" class="formbuilder-text-label">Phone Number<span class="formbuilder-required">*</span></label>
+<input type="tel" class="form-control" name="text-1707508515014-0" maxlength="16" id="text-1707508515014-0" required="required" aria-required="true" fdprocessedid="eqejb8"></div><div class="">
+<p id="control-6491025">By signing up, you have read and agree to our terms and conditions.</p>
+<iframe src="createTerms.html" width=350 height=300></iframe>
+</div><div class="formbuilder-button form-group field-button-1707508835834-0">
+
+<button type="submit" class="submit" disabled="true" name="button-1707508835834-0" style="default" id="button-1707508835834-0" fdprocessedid="3tqw73">Create Account</button></div></div></form>
+<h5>Already have an account? <a href="signin.html">Log in.</a></h5>
+</body>
+<html>

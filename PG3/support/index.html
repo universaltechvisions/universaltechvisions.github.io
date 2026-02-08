@@ -1,0 +1,63 @@
+<html>
+<head>
+  <link rel="stylesheet" href="support.css">
+
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+<body>
+
+<h2>My Phonebook</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+<ul id="myUL">
+  <li><span class="caret">Software</span>
+    <ul class="nested">
+      <li><a>Hardware</a></li>
+		
+        
+    </ul>
+	</li>
+  <li><span class="caret">Hardware</span	
+  </li>
+</ul>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+}
+</script>
+
+</body>
+</html>
